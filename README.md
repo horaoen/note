@@ -2,4 +2,4 @@
 personal note writting by latex
 
 ## quick link
-- [latex syntax example](./tex/example/example.tex)
+- [latex quick start](https://www.andy-roberts.net/latex/)
