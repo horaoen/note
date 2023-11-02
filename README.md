@@ -1,5 +1,2 @@
 # note
-personal note writting by latex
-
-## quick link
-- [latex quick start](https://www.andy-roberts.net/latex/)
+personal note writting by typst using my [typst-template(typstempl)](www.github.com/horaone/typstempl)
