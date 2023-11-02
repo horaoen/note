@@ -1,0 +1,3 @@
+[submodule "typstempl"]
+	path = typstempl
+	url = https://github.com/horaoen/typstempl.git
