@@ -1,8 +1,14 @@
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+package base;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestInstance.Lifecycle;
 
+import lombok.extern.slf4j.Slf4j;
 import redis.clients.jedis.Jedis;
 
+@Slf4j
+@TestInstance(Lifecycle.PER_CLASS)
 public abstract class JedisCommandsTestBase {
 
   protected Jedis jedis;
@@ -10,15 +16,15 @@ public abstract class JedisCommandsTestBase {
   public JedisCommandsTestBase() {
     super();
   }
-
-  @BeforeEach
+  @BeforeAll
   public void setUp() throws Exception {
     jedis = new Jedis(
         "redis://default:qSOzP3a4Sh1v89oaHGQ1nVMLOXpu1Le2@redis-15066.c44.us-east-1-2.ec2.cloud.redislabs.com:15066");
+    log.info("jedis setup");
   }
-
-  @AfterEach
+  @AfterAll
   public void tearDown() throws Exception {
     jedis.close();
+    log.info("jedis close");
   }
 }
