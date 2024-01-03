@@ -1,4 +1,4 @@
-#import "../../typstempl/template/note.typ": note
+#import "./typstempl/note.typ": note
 
 #show: doc => note(
   title: "Java基础",
